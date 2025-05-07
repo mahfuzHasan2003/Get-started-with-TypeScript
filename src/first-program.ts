@@ -99,3 +99,22 @@ console.log(reverseString("hello"));
 // Objective: Write a function that uses the rest operator for variable-length arguments.
 // Instructions:
 // Create a function that takes multiple numeric arguments (using the rest operator) and returns the sum of all arguments.
+
+const sumOfArguments = (...argument: number[] ): number => {  
+   console.log();
+   return argument.reduce((number, acc) => number+acc);
+}
+console.log(sumOfArguments(4, 12, 25));
+
+
+// Task 7: Type Assertion and Narrowing
+// Objective: Write a function that behaves differently based on the input type.
+// Instructions:
+// Create a function that accepts a parameter of type string | number.
+// The function should:
+// Return the length if the input is a string.
+// Return the square if the input is a number.
+
+const typeAssertion = (para: string | number): number => {
+   return typeof para === "string" ? para.length : Math.pow(para, 2);
+}
